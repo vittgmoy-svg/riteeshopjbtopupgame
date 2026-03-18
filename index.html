@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riteeshop Ultra</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+color:#fff;
+
+/* BACKGROUND */
+background:url('assets/re.jpg') no-repeat center center fixed;
+background-size:cover;
+}
+.input-group{
+display:flex;
+gap:5px;
+}
+
+#userId{
+flex:1;
+}
+#userId{
+width:40%;
+}
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#020617;
+color:#fff;
+}
+
+/* HEADER */
+header{text-align:center;padding:15px;}
+.title{
+font-size:30px;
+font-weight:bold;
+color:#22c55e;
+text-shadow:0 0 10px #22c55e;
+}
+
+/* BANNER */
+.banner{overflow:hidden;margin:10px;}
+.slides{display:flex;width:300%;animation:slide 12s infinite;}
+.slides img{width:100%;height:180px;object-fit:cover;border-radius:10px;}
+
+@keyframes slide{
+0%{transform:translateX(0);}  
+
+25%{transform:translateX(-30%);}
+
+50%{transform:translateX(0);}
+
+
+}
+}
+}
+/* CONTAINER */
+.container{width:90%;max-width:20x;margin:auto;}
+
+/* GAME GRID */
+.game-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
+gap:12px;
+}
+
+.game-card{
+background:#0f172a;
+padding:10px;
+border-radius:10px;
+text-align:center;
+cursor:pointer;
+transition:0.3s;
+}
+
+.game-card:hover{
+transform:scale(1.07);
+box-shadow:0 0 20px #22c55e;
+}
+
+.game-card.active{border:2px solid #22c55e;}
+.game-card img{width:100%;border-radius:10px;}
+
+.logo-dana{
+width:80px;
+height:80px;
+object-fit:contain;
+}
+/* FORM */
+.form{
+margin:40px auto;
+max-width:700px;
+background:#0f172a;
+padding:20px;
+border-radius:12px;
+box-shadow:0 0 20px #22c55e;
+}
+
+input,select{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:8px;
+background:#020617;
+color:#fff;
+}
+
+/* NOMINAL */
+.nominal-box{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+}
+
+.nominal-item{
+background:#020617;
+padding:10px;
+border-radius:8px;
+text-align:center;
+cursor:pointer;
+}
+
+.nominal-item.active{
+background:#22c55e;
+color:#000;
+}
+
+/* TOTAL */
+.total{
+margin-top:10px;
+font-size:18px;
+color:#22c55e;
+}
+
+/* BUTTON */
+.btn{
+margin-top:15px;
+background:#22c55e;
+padding:12px;
+border:none;
+border-radius:8px;
+width:100%;
+font-weight:bold;
+cursor:pointer;
+}
+
+.btn:disabled{background:#555;}
+
+/* POPUP */
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.95);
+justify-content:center;
+align-items:center;
+}
+.header{
+display:flex;
+align-items:center;
+justify-content:flex-start;
+padding:15px 20px;
+gap:10px;
+}
+
+/* kotak logo */
+.logo-box{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+/* gambar logo */
+.logo{
+width:40px;
+height:40px;
+object-fit:cover;
+border-radius:50%;
+box-shadow:0 0 10px #22c55e;
+}
+
+/* teks */
+.header span{
+font-size:20px; /* BESARIN */
+font-weight:700;
+color:#22c55e;
+text-shadow:0 0 15px #22c55e;
+}
+.box{
+background:#0f172a;
+padding:20px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 0 20px #22c55e;
+}
+
+.qr{
+width:280px;
+border-radius:10px;
+margin:10px 0;
+}
+#metode{
+width:100%;
+padding:12px 14px;
+
+background:linear-gradient(145deg,#020617,#0f172a);
+border:1px solid rgba(255,255,255,0.1);
+
+color:#e5e7eb;
+border-radius:10px;
+
+font-size:14px;
+font-weight:500;
+
+outline:none;
+cursor:pointer;
+
+transition:all 0.25s ease;
+}
+
+/* Hover natural (soft, bukan glow lebay) */
+#metode:hover{
+border:1px solid #22c55e;
+background:#020617;
+}
+
+/* Focus efek halus */
+#metode:focus{
+border:1px solid #22c55e;
+box-shadow:0 0 0 2px rgba(34,197,94,0.2);
+}
+
+/* Saat dipilih */
+#metode option{
+background:#020617;
+color:#fff;
+.input-group{
+display:flex;
+gap:10px;
+}
+
+.input-group input{
+flex:1;
+}
+@media(max-width:500px){
+.input-group{
+flex-direction:column;
+}
+}
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo-box">
+        <img src="assets/rite.jpg" class="logo">
+        <span>RITEESHOP JB TOPUP GAME</span>
+    </div>
+</header>
+
+<!-- BANNER -->
+<div class="banner">
+<div class="slides">
+<img src="altrx.jpg">
+<img src="bs.jpg">
+<img src="fcmobile.png">
+<img src="ps.jpg">
+<img src="ff.jpg">
+
+</div>
+
+<div class="container">
+
+<h3>Pilih Game</h3>
+<div class="game-grid" id="gameGrid"></div>
+
+<div class="form">
+  
+<div class="input-group">
+    <div>
+        <label>User ID</label>
+        <input type="text" placeholder="Masukkan ID">
+    </div>
+    </div>
+</div>
+</div>
+NOTE:isi id mu dengan jelas agar tidak ada kesalahan atau keliruan transaksi!!
+<h4>Pilih Nominal</h4>
+<div id="nominalBox" class="nominal-box"></div>
+
+<select id="metode">
+<option value="">💳 Pilih Metode Pembayaran</option>
+<option value="QRIS">QRIS • Scan Semua E-Wallet</option>
+<option value="DANA">DANA • Cepat & Instan</option>
+</select>
+
+<div class="total" id="total">Total: Rp 0</div>
+
+<button id="btn" class="btn" disabled onclick="bayar()">Bayar Sekarang</button>
+
+
+
+
+{riteeshopid@gmail.com}
+
+</div>
+
+riteehop grid-template-columns
+</div>
+MARKETINGSSBYTRETERSSS_40RABSS_22QTRA
+</div>
+
+<!-- POPUP QR -->
+<div id="qrpopup" class="popup">
+<div class="box">
+<h3>Scan QRIS</h3>
+<img src="qr.jpg" class="qr">
+<button class="btn" onclick="kirimWA()">Kirim Bukti</button>
+</div>
+</div>
+
+<!-- POPUP DANA -->
+<div id="danapopup" class="popup">
+<div class="box">
+
+<h3>💳 Pembayaran DANA</h3>
+
+<div class="pay-box">
+    <img src="dana.jpg" class="logo-dana">
+    
+    <div class="pay-info">
+        <p class="label">NO DANA</p>
+        <button class="number">0857-5834-1770</button>
+    </div>
+</div>
+
+<button class="btn" onclick="copyDana()">📋 Salin Nomor</button>
+<button class="btn" onclick="kirimWA()">📤 Kirim Bukti</button>
+
+</div>
+</div>
+
+<script>
+let selectedGame="", selectedNominal="", selectedHarga=0;
+
+const games = [
+{name:"Free Fire", img:"ff.jpg"},
+{name:"Mobile Legends", img:"ml.jpg"},
+{name:"PUBG", img:"pubg.jpg"},
+{name:"Honor of Kings", img:"hok.jpg"},
+{name:"FC Mobile", img:"fcmobile.png"},
+{name:"Valorant", img:"ps.jpg"},
+{name:"Genshin", img:"sen.jpg"},
+{name:"CODM", img:"col.png"},
+{name:"Blod Strike", img:"bs.jpg"},
+{name:"Clash of Clans", img:"co.jpg"},
+{name:"Clash Royale", img:"cl.jpg"},
+{name:"Minecraft", img:"m.png"},
+{name:"Roblox", img:"r.jpg"}
+];
+
+const dataGame = {
+"Free Fire":[
+{name:"5 DM",harga:1000},{name:"12 DM",harga:2500},{name:"50 DM",harga:8000},
+{name:"70 DM",harga:10000},{name:"100 DM",harga:15000},{name:"140 DM",harga:20000},
+{name:"210 DM",harga:30000},{name:"355 DM",harga:50000},{name:"720 DM",harga:100000}
+],
+"Mobile Legends":[
+{name:"5 DM",harga:1500},{name:"50 DM",harga:10000},{name:"86 DM",harga:22000},
+{name:"172 DM",harga:43000},{name:"257 DM",harga:65000},{name:"514 DM",harga:125000}
+],
+"PUBG":[
+{name:"30 UC",harga:8000},
+{name:"60 UC",harga:15000},
+{name:"120 UC",harga:30000},
+{name:"180 UC",harga:45000},
+{name:"325 UC",harga:75000},
+{name:"660 UC",harga:150000},
+{name:"1320 UC",harga:300000},
+{name:"1800 UC",harga:350000}
+],
+"Honor of Kings":[
+{name:"80 Token",harga:15000},
+{name:"240 Token",harga:45000},
+{name:"400 Token",harga:75000}
+],
+"FC Mobile":[
+{name:"40 FC Points",harga:15000},
+{name:"100 FC Points",harga:35000},
+{name:"250 FC Points",harga:75000},
+{name:"520 FC Points",harga:150000},
+{name:"750 FC Points",harga:210000},
+{name:"1070 FC Points",harga:300000},
+{name:"2200 FC Points",harga:600000},
+{name:"5750 FC Points",harga:1400000},
+{name:"12000 FC Points",harga:2800000}
+],
+"Magic Chess":[
+{name:"50 MC Diamond",harga:10000},
+{name:"150 MC Diamond",harga:25000},
+{name:"300 MC Diamond",harga:50000},
+{name:"600 MC Diamond",harga:90000},
+{name:"1200 MC Diamond",harga:170000},
+{name:"Weekly Pass",harga:30000},
+{name:"Monthly Pass",harga:85000}
+],
+"Valorant":[
+{name:"60 VP",harga:10000},
+{name:"125 VP",harga:20000},
+{name:"300 VP",harga:50000},
+{name:"420 VP",harga:65000},
+{name:"700 VP",harga:100000},
+{name:"1375 VP",harga:200000},
+{name:"2400 VP",harga:350000}
+],
+"Genshin":[
+{name:"60 Genesis",harga:16000},
+{name:"300 Genesis",harga:79000},
+{name:"980 Genesis",harga:249000},
+{name:"1980 Genesis",harga:499000},
+{name:"3280 Genesis",harga:799000},
+{name:"6480 Genesis",harga:1499000}
+],
+"CODM":[
+{name:"80 CP",harga:15000},
+{name:"160 CP",harga:30000},
+{name:"240 CP",harga:45000},
+{name:"420 CP",harga:70000},
+{name:"880 CP",harga:140000},
+{name:"2400 CP",harga:350000}
+],
+"Blod Strike":[
+{name:"30M Chip",harga:10000},
+{name:"60M Chip",harga:20000},
+{name:"100M Chip",harga:30000},
+{name:"200M Chip",harga:60000},
+{name:"500M Chip",harga:120000}
+],
+"Clash of Clans":[
+{name:"80 Gems",harga:15000},
+{name:"500 Gems",harga:75000},
+{name:"1200 Gems",harga:150000},
+{name:"2500 Gems",harga:300000},
+{name:"6500 Gems",harga:700000}
+],
+"Clash Royale":[
+{name:"80 Gems",harga:15000},
+{name:"500 Gems",harga:75000},
+{name:"1200 Gems",harga:150000},
+{name:"2500 Gems",harga:300000}
+],
+"Minecraft":[
+{name:"320 Minecoins",harga:50000},
+{name:"1020 Minecoins",harga:150000},
+{name:"1720 Minecoins",harga:250000},
+{name:"3500 Minecoins",harga:500000}
+],
+"Roblox":[
+{name:"80 Robux",harga:15000},
+{name:"160 Robux",harga:30000},
+{name:"400 Robux",harga:70000},
+{name:"800 Robux",harga:140000},
+{name:"1700 Robux",harga:280000},
+{name:"4500 Robux",harga:700000}
+]
+};
+
+let grid=document.getElementById("gameGrid");
+games.forEach(g=>{
+let div=document.createElement("div");
+div.className="game-card";
+div.innerHTML=`<img src="${g.img}"><p>${g.name}</p>`;
+div.onclick=()=>pilihGame(div,g.name);
+grid.appendChild(div);
+});
+
+function pilihGame(el,game){
+selectedGame=game;
+document.querySelectorAll(".game-card").forEach(e=>e.classList.remove("active"));
+el.classList.add("active");
+
+let box=document.getElementById("nominalBox");
+box.innerHTML="";
+
+dataGame[game].forEach(item=>{
+let div=document.createElement("div");
+div.className="nominal-item";
+div.innerHTML=`${item.name}<br>Rp ${item.harga.toLocaleString()}`;
+
+div.onclick=()=>{
+document.querySelectorAll(".nominal-item").forEach(e=>e.classList.remove("active"));
+div.classList.add("active");
+
+selectedNominal=item.name;
+selectedHarga=item.harga;
+update();
+};
+
+box.appendChild(div);
+});
+}
+
+function update(){
+document.getElementById("total").innerText="Total: Rp "+selectedHarga.toLocaleString();
+if(selectedGame && selectedNominal && document.getElementById("metode").value){
+document.getElementById("btn").disabled=false;
+}
+}
+
+document.getElementById("metode").addEventListener("change",update);
+
+function bayar(){
+let m=document.getElementById("metode").value;
+if(m=="QRIS"){
+document.getElementById("qrpopup").style.display="flex";
+}else{
+document.getElementById("danapopup").style.display="flex";
+}
+}
+
+function kirimWA(){
+let id=document.getElementById("userId").value;
+let server=document.getElementById("server").value;
+let metode=document.getElementById("metode").value;
+
+let pesan=`RITEESHOP JB TOPUP GAME
+Game: ${selectedGame}
+ID: ${id}
+Server: ${server}
+Nominal: ${selectedNominal}
+Total: Rp ${selectedHarga.toLocaleString()}
+Metode: ${metode}
+
+Saya sudah bayar`;
+
+window.open("https://wa.me/6285809805463?text="+encodeURIComponent(pesan));
+}
+</script>
+
+</body>
+</html>
